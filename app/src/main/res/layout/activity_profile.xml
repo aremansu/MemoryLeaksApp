@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/padding_8x"
+    tools:context=".main.MainActivity"
+    >
+
+    <ImageView
+        android:layout_width="@dimen/view_size_260x"
+        android:layout_height="@dimen/view_size_260x"
+        android:layout_gravity="center"
+        android:contentDescription="@string/image_default_description"
+        tools:src="@tools:sample/avatars"
+        />
+
+    <TextView
+        style="@style/TitleStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/margin_16x"
+        android:layout_marginVertical="@dimen/margin_8x"
+        tools:text="Leshy, The Scrybe of Beasts"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_16x"
+        android:layout_marginTop="@dimen/margin_8x"
+        tools:text="@string/profile_activity_level_progress_title_fmt"
+        />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        style="@style/LinearProgressStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_16x"
+        android:layout_marginVertical="@dimen/margin_8x"
+        android:progress="26"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+
+    <Button
+        style="@style/DefaultButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="reset level"
+        />
+
+    <Button
+        style="@style/DefaultButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="delete account"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

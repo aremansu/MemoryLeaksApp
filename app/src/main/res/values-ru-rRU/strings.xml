@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">УтечкиПамятиПРИЛОЖЕНИЕ</string>
+    <string name="image_default_description">bread.</string>
+
+    <string name="load">загрузить.</string>
+    <string name="loading">загрузка.</string>
+    <string name="failed">потрачено.</string>
+    <string name="done">загружено.</string>
+
+    <string name="main_activity_profile_button_text">Профиль</string>
+    <string name="main_activity_handler_button_text">Долго бегущий лес</string>
+    <string name="main_activity_calculator_button_text">clickerrrr</string>
+    <string name="main_activity_todo_button_text">ЧУ-ЧУ</string>
+    <string name="main_activity_logout_button_text">Выход там</string>
+
+    <string name="authentication_activity_edit_text_username_hint">Н ик не йм</string>
+    <string name="authentication_activity_edit_text_password_hint">П а р о л ь</string>
+    <string name="authentication_activity_button_text">Прожожить</string>
+
+    <string name="clicker_activity_button_text">Ж М И</string>
+    <string name="clicker_activity_total_title_text">тоталл:</string>
+
+    <string name="profile_activity_level_progress_title_fmt">Ваш уровень: %1d</string>
+</resources>

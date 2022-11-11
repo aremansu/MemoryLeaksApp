@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginHorizontal="@dimen/margin_16x"
+    >
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_40x"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textSize="@dimen/text_size_24x"
+            />
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="@dimen/view_size_260x"
+            android:layout_height="@dimen/view_size_260x"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_16x"
+            android:contentDescription="@string/image_default_description"
+            android:src="@drawable/ic_home_leak"
+            />
+
+        <EditText
+            android:id="@+id/username_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_size_44x"
+            android:layout_marginVertical="@dimen/margin_8x"
+            android:autofillHints="no"
+            android:background="@drawable/bg_edit_text_disabled"
+            android:hint="@string/authentication_activity_edit_text_username_hint"
+            android:inputType=""
+            android:paddingHorizontal="@dimen/margin_16x"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/text_size_16x"
+            />
+
+        <EditText
+            android:id="@+id/password_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_size_44x"
+            android:layout_marginVertical="@dimen/margin_8x"
+            android:autofillHints="no"
+            android:background="@drawable/bg_edit_text_disabled"
+            android:hint="@string/authentication_activity_edit_text_password_hint"
+            android:inputType="textPassword"
+            android:paddingHorizontal="@dimen/margin_16x"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/text_size_16x"
+            />
+
+        <Button
+            android:id="@+id/continue_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_disabled"
+            android:layout_marginVertical="@dimen/margin_8x"
+            android:enabled="false"
+            android:text="@string/authentication_activity_button_text"
+            android:textAllCaps="false"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_16x"
+            />
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+
+<resources>
+    <string name="app_name">MemoryLeaksApp</string>
+    <string name="image_default_description">bread.</string>
+
+    <string name="load">load.</string>
+    <string name="loading">loading.</string>
+    <string name="failed">failed.</string>
+    <string name="done">done.</string>
+
+    <string name="main_activity_profile_button_text">Profile</string>
+    <string name="main_activity_handler_button_text">Long running task</string>
+    <string name="main_activity_calculator_button_text">clicker</string>
+    <string name="main_activity_todo_button_text">TODO</string>
+    <string name="main_activity_logout_button_text">Log out</string>
+
+    <string name="authentication_activity_edit_text_username_hint">Username</string>
+    <string name="authentication_activity_edit_text_password_hint">Password</string>
+    <string name="authentication_activity_button_text">Continue</string>
+
+    <string name="clicker_activity_button_text">Press</string>
+    <string name="clicker_activity_total_title_text">Total:</string>
+
+    <string name="profile_activity_level_progress_title_fmt">Current level: %1d</string>
+</resources>

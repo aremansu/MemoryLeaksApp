@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="view_size_40x">40dp</dimen>
+    <dimen name="view_size_44x">44dp</dimen>
+    <dimen name="view_size_260x">200dp</dimen>
+
+    <dimen name="stroke_size_1x">1dp</dimen>
+    <dimen name="stroke_size_3x">3dp</dimen>
+
+    <dimen name="radius_3x">3dp</dimen>
+    <dimen name="radius_6x">6dp</dimen>
+
+    <dimen name="padding_8x">8dp</dimen>
+    <dimen name="padding_10x">10dp</dimen>
+    <dimen name="padding_16x">16dp</dimen>
+    <dimen name="padding_40x">40dp</dimen>
+
+    <dimen name="margin_8x">8dp</dimen>
+    <dimen name="margin_10x">10dp</dimen>
+    <dimen name="margin_16x">16dp</dimen>
+    <dimen name="margin_40x">40dp</dimen>
+
+    <dimen name="text_size_16x">16sp</dimen>
+    <dimen name="text_size_24x">24sp</dimen>
+
+</resources>
