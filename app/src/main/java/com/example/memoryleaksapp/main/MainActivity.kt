@@ -5,7 +5,6 @@ import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -24,7 +23,6 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         var levelUpDialog: ((LevelRepository) -> AlertDialog)? = null
-        var logError: ((Throwable) -> Unit)? = null
     }
 
     private lateinit var usernameTextView: TextView
@@ -37,19 +35,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        if (!isUserLogged()) { handleNullUser() }
 
+        initViews()
         levelUpDialog = { showLevelUpDialog(it) }
+    }
 
-        if (SingletonK.instance?.user == null) {
-            logError = {
-                Log.e(
-                    this::class.simpleName,
-                    it.message ?: "L E A K"
-                )
-            }
-            navigateToAuthActivity()
-            finish()
-        }
+    private fun initViews() {
         val username = TITLE_FMT.format(SingletonK.instance?.user?.username)
         usernameTextView = findViewById(R.id.activity_main_username)
         usernameTextView.text = username
@@ -93,6 +85,17 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, "Done", Toast.LENGTH_SHORT).show()
             }
         }.show()
+
+    private fun isUserLogged(): Boolean = SingletonK.instance?.user != null
+
+    private fun handleNullUser() {
+        navigateToAuthActivity()
+        AuthenticationActivity.logError?.invoke(
+            this::class.java.simpleName,
+            IllegalArgumentException("User is null!")
+        )
+        finish()
+    }
 
     private fun logOut() {
         val logOut = LeakyClass(this)

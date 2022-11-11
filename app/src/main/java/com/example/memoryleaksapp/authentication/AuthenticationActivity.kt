@@ -7,7 +7,6 @@ import android.text.TextWatcher
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.memoryleaksapp.main.MainActivity
@@ -15,6 +14,10 @@ import com.example.memoryleaksapp.R
 import com.example.memoryleaksapp.singleton.SingletonK
 
 class AuthenticationActivity: AppCompatActivity() {
+
+    companion object {
+        var logError: ((String, Throwable) -> Unit)? = null
+    }
 
     private val textWatcher by lazy { initTextWatcher() }
 
@@ -29,22 +32,22 @@ class AuthenticationActivity: AppCompatActivity() {
         val authenticator: UserAuthUseCase = LocalUserAuthUseCase(applicationContext)
         SingletonK.createInstance(authenticator)
 
-        MainActivity.logError?.invoke(IllegalArgumentException("User is null!"))
         if (SingletonK.instance?.user == null) {
-            bindViews()
+            initViews()
             setUpListeners()
         } else {
             openMainActivity()
         }
+
+        logError = { tag, msg ->
+            Log.e(
+                tag,
+                msg.message ?: "w a t"
+            )
+        }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-
-        //usernameEditText?.removeTextChangedListener(textWatcher)
-    }
-
-    private fun bindViews() {
+    private fun initViews() {
         usernameEditText = findViewById(R.id.username_edittext)
         passwordEditText = findViewById(R.id.password_edittext)
         continueButton = findViewById(R.id.continue_button)
